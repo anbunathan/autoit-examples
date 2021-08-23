@@ -1,0 +1,11 @@
+Local $String = "Sample simple english text 한국어    텍스트의 예 טקסט עברית ירושלים русский образец អត្ថបទថៃ"
+Local $aLang = StringRegExp($String, "(*UCP)(\p{Hangul}+(?:\s+\p{Hangul}+)*)", 1)
+If not @error Then MsgBox(64, "Korean text found", $aLang[0])
+$aLang = StringRegExp($String, "(*UCP)(\p{Khmer}+(?:\s+\p{Khmer}+)*)", 1)
+If not @error Then MsgBox(64, "Thaï text found", $aLang[0])
+$aLang = StringRegExp($String, "(*UCP)(\p{Latin}+(?:\s+\p{Latin}+)*)", 1)
+If not @error Then MsgBox(64, "Latin text found", $aLang[0])
+$aLang = StringRegExp($String, "(*UCP)(\p{Hebrew}+(?:\s+\p{Hebrew}+)*)", 1)
+If not @error Then MsgBox(64, "Hebrew text found", $aLang[0])
+$aLang = StringRegExp($String, "(*UCP)(\p{Cyrillic}+(?:\s+\p{Cyrillic}+)*)", 1)
+If not @error Then MsgBox(64, "Cyrillic text found", $aLang[0])
