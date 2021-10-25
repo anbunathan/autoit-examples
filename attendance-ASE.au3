@@ -75,11 +75,14 @@
 	   If StringCompare($value1, "Help/more info:")==0 Then
 		 ExitLoop
 	   EndIf
-	   $sFormattedName = StringRegExpReplace($value1, '(E[Nn][Gg]1[6789][Cc][Ss]\d{4}\s{0,1})(-)*\s{0,1}', '')
+	   $sFormattedName = StringRegExpReplace($value1, '(E[Nn][Gg][12][0123456789][Cc][Ss]\d{4}\s{0,1})(-)*\s{0,1}', '')
+	   $sFormattedName = StringRegExpReplace($sFormattedName, '_', '')
+	   $sFormattedName = StringRegExpReplace($sFormattedName, ' ', '')
 	   ;ConsoleWrite($sFormattedName & @CRLF)
 	   ; Display the array to see that it contains the ASCII values for each character in the string.
 	   Local $aArray = StringToASCIIArray($value2)
 	   Local $iIndex = _ArraySearch($aArray, "10004", 0, 0, 0, 0, 1, 2)
+	   ;ConsoleWrite("$iIndex: " & $iIndex & @CRLF)
 	   if $iIndex>0 Then
 		 ;ConsoleWrite("P" & @CRLF)
 		 $status = "P"
@@ -125,6 +128,81 @@
 	  Next
 	  if StringCompare($sFormattedName, "Nisha")==0 Then
 		 $matchname = "NISHA V SHETTY"
+	  EndIf
+	  if StringCompare($sFormattedName, "VandanaM")==0 Then
+		 $matchname = "VANDANA M"
+	  EndIf
+	  if StringCompare($sFormattedName, "Sharan")==0 Then
+		 $matchname = "B SRI SHARAN"
+	  EndIf
+	  if StringCompare($sFormattedName, "Varun")==0 Then
+		 $matchname = "VARUN P SHRIVATHSA"
+	  EndIf
+	  if StringCompare($sFormattedName, "RamKasuru")==0 Then
+		 $matchname = "KASURU KODANDA RAMA RAJU"
+	  EndIf
+	  if StringCompare($sFormattedName, "NaveenA")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "SyedShahabaazAhmed")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "JVChetan")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "Creflo")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "Haasini.T.S")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "VinayJ")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "RetishKajuluri")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "JunedKilledar")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "MythriJL")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "VishnuPrasadM")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "SwethaM")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "PiyushNarsinghani")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "AmitPrabhu")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "AmitPrabhu")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "KarnaDasaradhaMallikarjunaReddy")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "KrishnaSai")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "GaddamSaichandra")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "RiyaSavant")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "Somesh.J")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "AshishSreenivas")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
+	  EndIf
+	  if StringCompare($sFormattedName, "AjayVenkatesh")==0 Then
+		 ConsoleWrite($sFormattedName & " is not found in class list " & @CRLF)
 	  EndIf
 	  ;ConsoleWrite("$maxpercent: " & $maxpercent & @CRLF)
 	  ;ConsoleWrite("$matchname: " & $matchname & @CRLF)

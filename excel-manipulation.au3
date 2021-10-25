@@ -35,7 +35,7 @@ If ($range = 0) Then HandleError("Write cell failed ")
 
 ; Save the created workbook - without a given path this will go to the temporary
 ; directory.  The argument 'TRUE' forces an overwrite of any existing file
-$err = _Excel_BookSaveAs($book, "test.xlsx", $xlWorkbookDefault, True)
+$err = _Excel_BookSaveAs($book, "C:\temp\test.xlsx", $xlWorkbookDefault, True)
 If ($err = 0) Then HandleError("Workbook save failed ")
 
 ; Close the workbook.  The argument 'TRUE' will save any changes
